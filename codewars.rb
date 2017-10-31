@@ -303,36 +303,56 @@ end
 
 
 def validSolution(board)
-  col1 = []
-  col2 = []
-  col3 = []
-  col4 = []
-  col5 = []
-  col6 = []
-  col7 = []
-  col8 = []
-  col9 = []
-  sq1 = []
-  sq2 = []
-  sq3 = []
-  sq4 = []
-  sq5 = []
-  sq6 = []
-  sq7 = []
-  sq8 = []
-  sq9 = []
+  columns = [
+    col0 = [],
+    col1 = [],
+    col2 = [],
+    col3 = [],
+    col4 = [],
+    col5 = [],
+    col6 = [],
+    col7 = [],
+    col8 = []
+  ]
+  squares = [
+    sq0 = [],
+    sq1 = [],
+    sq2 = [],
+    sq3 = [],
+    sq4 = [],
+    sq5 = [],
+    sq6 = [],
+    sq7 = [],
+    sq8 = []
+  ]
   board.each_with_index do |row, idx|
     return false if row.include?(0) || row.uniq.length != 9
-    col1 << row[0]
-    col2 << row[1]
-    col3 << row[2]
-    col4 << row[3]
-    col5 << row[4]
-    col6 << row[5]
-    col7 << row[6]
-    col8 << row[7]
-    col9 << row[8]
+    if idx == 0 || idx == 1 || idx == 2
+      row[0..2].each { |num| sq0 << num}
+      row[3..5].each { |num| sq1 << num}
+      row[6..8].each { |num| sq2 << num}
+    elsif idx == 3 || idx == 4 || idx == 5
+      row[0..2].each { |num| sq3 << num}
+      row[3..5].each { |num| sq4 << num}
+      row[6..8].each { |num| sq5 << num}
+    else
+      row[0..2].each { |num| sq6 << num}
+      row[3..5].each { |num| sq7 << num}
+      row[6..8].each { |num| sq8 << num}
+    end
+    col0 << row[0]
+    col1 << row[1]
+    col2 << row[2]
+    col3 << row[3]
+    col4 << row[4]
+    col5 << row[5]
+    col6 << row[6]
+    col7 << row[7]
+    col8 << row[8]
   end
+  columns.each { |col| return false if col.uniq.length != 9}
+  squares.each { |square| return false if square.uniq.length != 9}
+  return true
 end
 
 
