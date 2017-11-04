@@ -357,6 +357,32 @@ end
 
 
 
+def rot13(string)
+  alpha = ('a'..'z').to_a
+  rotated_alpha = alpha.rotate(13)
+  upcase_alpha = ('A'..'Z').to_a
+  rotated_upcase = upcase_alpha.rotate(13)
+  result = ""
+  string.split('').each do |char|
+    if alpha.include?(char)
+      result += rotated_alpha[alpha.index(char)]
+    elsif upcase_alpha.include?(char)
+      result += rotated_upcase[upcase_alpha.index(char)]
+    else
+      result += char
+    end
+  end
+  return result
+end
+
+
+def productFib(prod)
+
+end
+
+
+
+
 
 
 
