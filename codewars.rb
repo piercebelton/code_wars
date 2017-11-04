@@ -179,52 +179,6 @@ end
 
 
 
- # not finished
-def zero
-  0
-end
-def one
-  1
-end
-def two
-  2
-end
-def three
-  3
-end
-def four
-  4
-end
-def five
-  5
-end
-def six
-  6
-end
-def seven
-  7
-end
-def eight
-  8
-end
-def nine
-  9
-end
-def plus
-  +
-end
-def minus
-  -
-end
-def times
-  *
-end
-def divided_by
-  /
-end
-
-
-
 def in_array(array1, array2)
   result = []
   array1.each do |a1sub|
@@ -377,7 +331,16 @@ end
 
 
 def productFib(prod)
-
+  fib = [0, 1]
+  last = fib.last
+  second = fib.first
+  while last * second < prod do
+    fib << last + second
+    last = fib.last
+    second = fib[fib.length - 2]
+  end
+  result = last * second == prod
+  return [second, last, result]
 end
 
 
