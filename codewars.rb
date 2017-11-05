@@ -330,6 +330,7 @@ def rot13(string)
 end
 
 
+
 def productFib(prod)
   fib = [0, 1]
   last = fib.last
@@ -342,6 +343,24 @@ def productFib(prod)
   result = last * second == prod
   return [second, last, result]
 end
+
+
+
+def snail(array)
+  snail = []
+  until array.length == 0 do
+    array.slice!(0).each { |num| snail << num}
+    array.each do |arr|
+      snail << arr.slice!(arr.length - 1)
+    end
+    return snail if array.empty?
+    array.slice!(array.length - 1).reverse.each { |num| snail << num }
+    array.reverse_each { |arr| snail << arr.slice!(0) }
+  end
+  return snail
+end
+
+snail([[1,2,3],[4,5,6],[7,8,9]])
 
 
 
