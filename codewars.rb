@@ -364,6 +364,51 @@ snail([[1,2,3],[4,5,6],[7,8,9]])
 
 
 
+class Bag
+  def initialize
+    @h = Hash.new{ 0 }
+  end
+  def <<(o)
+    @h[o] += 1
+  end
+  def [](o)
+    @h[o]
+  end
+end
+bag = Bag.new
+
+
+def rolldice_sum_prob(sum, num_of_dice)
+  return if sum / num_of_dice > 6 || sum < num_of_dice
+
+  die_possibilities = [1, 2, 3, 4, 5, 6]
+  possible_combinations = 6 ** num_of_dice
+  # times_each_number_used = possible_combinations / num_of_dice / 6
+
+  
+
+
+  # all_sums = []
+  # num_of_dice.times do |die|
+  #   die_possibilities.each do |num|
+  #     iterations = 1
+  #     sum_of_dice = num
+  #     while iterations < num_of_dice do
+  #
+  #     end
+  #   end
+  # end
+
+
+  # while operations_performed < possible_combinations do
+  #   dice_amount.times do
+  #
+  #   end
+  # end
+
+
+end
+
 
 
 
