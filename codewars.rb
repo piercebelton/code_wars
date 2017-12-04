@@ -385,7 +385,9 @@ def rolldice_sum_prob(sum, num_of_dice)
   possible_combinations = 6 ** num_of_dice
   # times_each_number_used = possible_combinations / num_of_dice / 6
 
+
   
+
 
 
   # all_sums = []

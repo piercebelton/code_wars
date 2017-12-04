@@ -1,0 +1,10 @@
+/Users/piercebelton/Desktop/code/code_wars/bin/Debug/netcoreapp2.0/code_wars.deps.json
+/Users/piercebelton/Desktop/code/code_wars/bin/Debug/netcoreapp2.0/code_wars.runtimeconfig.json
+/Users/piercebelton/Desktop/code/code_wars/bin/Debug/netcoreapp2.0/code_wars.runtimeconfig.dev.json
+/Users/piercebelton/Desktop/code/code_wars/bin/Debug/netcoreapp2.0/code_wars.dll
+/Users/piercebelton/Desktop/code/code_wars/bin/Debug/netcoreapp2.0/code_wars.pdb
+/Users/piercebelton/Desktop/code/code_wars/obj/Debug/netcoreapp2.0/code_wars.csproj.CoreCompileInputs.cache
+/Users/piercebelton/Desktop/code/code_wars/obj/Debug/netcoreapp2.0/code_wars.AssemblyInfoInputs.cache
+/Users/piercebelton/Desktop/code/code_wars/obj/Debug/netcoreapp2.0/code_wars.AssemblyInfo.cs
+/Users/piercebelton/Desktop/code/code_wars/obj/Debug/netcoreapp2.0/code_wars.dll
+/Users/piercebelton/Desktop/code/code_wars/obj/Debug/netcoreapp2.0/code_wars.pdb
