@@ -386,7 +386,7 @@ def rolldice_sum_prob(sum, num_of_dice)
   # times_each_number_used = possible_combinations / num_of_dice / 6
 
 
-  
+
 
 
 
@@ -411,6 +411,33 @@ def rolldice_sum_prob(sum, num_of_dice)
 
 end
 
+
+# 5 kyu 'Primes with even digits'
+# given integer 'n', find the closest prime number with the maximum number of even digits.
+
+# examples:
+# Test.assert_equals(f(1000), 887)
+# Test.assert_equals(f(10000), 8887)
+# Test.assert_equals(f(500), 487)
+# Test.assert_equals(f(487), 467)
+require 'prime'
+
+def f(n)
+  primes = []
+  Prime.each(n) { |p| primes << p }
+  primes.pop if primes.last == n
+  result = primes.last
+  result_even_count = 0
+  primes.reverse.each do |prime|
+    char_array = prime.to_s.chars.map(&:to_i)
+    even_count = char_array.inject(0){ |count, char| char.even? ? count + 1 : count}
+    if (even_count > result_even_count)
+      result = prime
+      result_even_count = even_count
+    end
+  end
+  result
+end
 
 
 
