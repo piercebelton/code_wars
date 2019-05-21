@@ -441,6 +441,37 @@ end
 
 
 
+# must take each word and put everything but the first and last character in alphabetical order. Words are only split by spaces, and hyphens/punctuation must remain in place.
+
+def scramble_words(words)
+  result = []
+  punctuation = ["-", "'", ",", "."]
+  words.split.each do |word|
+    if word.length == 1
+      result << word
+      next
+    end
+    scrambled_word = []
+    letters = []
+    word.split('').each_with_index do |char, index|
+      punctuation.include?(char) ? scrambled_word[index] = char : letters.push(char)
+    end
+    first_letter = letters.shift
+    last_letter = letters.pop
+    letters.sort!.unshift(first_letter).push(last_letter)
+    word_index = 0
+    letters.each do |c|
+      word_index += 1 until scrambled_word[word_index].nil?
+      scrambled_word[word_index] = c
+    end
+    result << scrambled_word.join
+  end
+  result.join(" ")
+end
+
+
+
+
 
 
 
